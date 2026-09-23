@@ -12,7 +12,7 @@ CODES={0:"Clear Sky",1:"Mainly Clear",2:"Partly Cloudy",3:"Overcast",45:"Fog",48
 
 @app.get("/",response_class=HTMLResponse)
 def home():
-    return open("templates/index.html",encoding="utf-8").read()
+   return open("index.html",encoding="utf-8").read()
 
 @app.get("/api/search")
 def search(q:str=Query(...,min_length=2)):
